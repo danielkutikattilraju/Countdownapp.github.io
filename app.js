@@ -5,9 +5,15 @@ const hoursEl=document.getElementById("hours");
 const minsEl=document.getElementById("mins");
 const secondsEl=document.getElementById("seconds");
 // declaration of next year Date
-const newYears = "1 jan 2022";
+let nextYear = "";
+
 // starting the function
 function countDown(){
+  console.log( new Date().getFullYear());
+  nextYear =  new Date().getFullYear();
+  nextYear =  nextYear + 1
+  let newYears = "1 jan" + nextYear;
+  new Date().getFullYear()
   const newYearsDate= new Date(newYears);
   const currentDAte = new Date();
   const totalSeconds=(newYearsDate-currentDAte)/1000;
